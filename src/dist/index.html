@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arsenal</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/libs/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/libs/css/owl.theme.default.min.css" />
+  <style>
+    body {
+      background: rgba(236, 240, 241,1.0);
+    }
+
+    .brand-logo img {
+      max-width:60px;
+      margin-left:0.2em;
+      padding:2px
+    }
+
+    .loader {
+      position:absolute;
+      top:40%;
+      left:50%;
+      width:100px;
+      margin-left:0;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 1em;
+      right: 1em;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      width: 60px;
+      height: 60px;
+      padding: 0 0 0 11px;
+      display: none;
+      z-index: 9999;
+    }
+    .scroll-top i {
+      color: white;
+      font-size: 44pt;
+    }
+
+    .wrap {
+      min-height:700px;
+    }
+
+    .title-text {
+      position: relative;
+      top: -.5em;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="navbar-fixed">
+    <nav id="header">
+      <div class="nav-wrapper green darken-1">
+        <a href="/home" class="brand-logo topScroll"><img src="assets/favicon.png" /> <span class="title-text">Android Arsenal</span></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/saved"><i class="material-icons">library_books</i></a></li>
+          <li><a href="/categories"><i class="material-icons">toc</i></a></li>
+          <li><a class="modal-trigger" id="aboutModalTrigger"><i class="material-icons">info</i></a></li>
+          <li><a class="waves-effect waves-light btn amber darken-2" href="//android-arsenal.com/" target="_blank">More</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <img src="assets/images/background.jpg" alt="SideImagine" />
+          <li><a href="/saved">Saved</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="//android-arsenal.com/" target="_blank">More</a></li>
+          <li><a class="modal-trigger" id="aboutModalTrigger2">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="wrap">
+    <app-root>
+
+      <div class="loader preloader-wrapper big active">
+        <div class="spinner-layer spinner-green-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
+      </div>
+
+    </app-root>
+  </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Android Arsenal</h5>
+          <p class="grey-text text-lighten-4">A collection of some awesome repositories to equip your Android applications with for next level experiences!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">About The Developer</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!" target="_blank">GitHub</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright green darken-1">
+      <div class="container">
+        © 2017 Planlodge
+        <a class="grey-text text-lighten-4 right" href="//planlodge.com" target="_blank">Portfolio</a>
+      </div>
+    </div>
+
+
+    <a class="topScroll scroll-top tooltipped" data-position="left" data-tooltip="Back to Top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+  </footer>
+
+  <!-- about modal -->
+
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <h4>Arsenal App</h4>
+      <p>A categorized directory of libraries and tools for Android.</p>
+      <p>Version 1.3 Made By Jarrod Sampson</p>
+    </div>
+    <div class="modal-footer">
+      <a class=" modal-action modal-close waves-effect waves-green btn-flat">Sweet</a>
+    </div>
+  </div>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="assets/headroom.js"></script>
+  <script src="assets/main.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      // activate menu dropdown
+      $(".dropdown-button").dropdown();
+
+      // menu side bar
+
+      $(".button-collapse").sideNav();
+
+
+      $('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+        ready: function() {  }, // Callback for Modal open
+        complete: function() {  } // Callback for Modal close
+      });
+
+      $('#aboutModalTrigger,#aboutModalTrigger2').click(function(){
+        $('#aboutModal').modal('open');
+      });
+
+    });
+  </script>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
