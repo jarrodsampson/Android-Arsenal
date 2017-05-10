@@ -1,0 +1,110 @@
+<div parallax [config]="{parallaxInitVal: -100, parallaxRatio: -7.3}" class="banner">
+  <div class="title">
+    <h1>{{title}}</h1>
+    <p>Find an Awesome Repo for your Project Today</p>
+    <div class="row">
+      <div class="col s8">
+        <input type="text" [(ngModel)]="item.term" placeholder="Search Arsenal..." />
+      </div>
+      <div class="col s4">
+        <button (click)="searchIt(item.term)" class="waves-effect waves-light btn amber darken-2">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row center-align">
+    <div class="col s12">
+      <h1>Top Categories</h1>
+    </div>
+  </div>
+</div>
+
+      <div class="topCategories">
+        <owl-carousel
+          [options]="{items: 6, dots: true, navigation: false, autoplay: true, loop:true, responsive:{'1300':{items:6},'1000':{items:5},'500':{items:3},'0':{items:1}}}"
+          [items]="categoriesTop"
+          [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item" *ngFor="let top of categoriesTop;let i = index">
+            <div class="chip" (click)="categoryView(top)">
+              {{top.title}} ({{top.total}})
+            </div>
+          </div>
+        </owl-carousel>
+      </div>
+
+
+<div class="container">
+
+  <div class="row center-align">
+    <div class="col s12">
+      <h3>Search By Letter</h3>
+    </div>
+  </div>
+</div>
+
+      <div class="letterSearch">
+        <owl-carousel
+          [options]="{items: 6, dots: true, navigation: false, autoplay: false, loop:true, responsive:{'1300':{items:24},'1000':{items:20},'500':{items:18},'0':{items:12}}}"
+          [items]="categoriesTop"
+          [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item" *ngFor="let letter of alphabet;let i = index">
+            <span class="letter" (click)="letterView(letter)">{{letter}}</span>
+          </div>
+        </owl-carousel>
+      </div>
+
+
+<div class="repoBg">
+  <div class="container">
+
+    <div class="row center-align">
+
+      <div class="col s12">
+        <h1>Top Repos</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col s6">
+      <div class="topRepoInputDiv">
+        <input class="topRepoInput" type="text" [(ngModel)]="search.title" placeholder="Search Top Repos..."/>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="repos">
+        <div class="col s12 m4 l3" *ngFor="let repo of arsenalData | searchFilter:search">
+          <div class="card hoverable left-align">
+            <div class="card-content">
+              <span class="card-title truncate" (click)="detailsView(repo)">{{repo.title}}</span>
+              <p class="" [innerHTML]="repo.description | truncate : 100"></p>
+            </div>
+            <div class="card-action">
+              <a (click)="detailsView(repo)">Details</a>
+              <a href="{{repo.link}}" target="_blank">Website</a>
+              <a (click)="saveRepo(repo)"><i class="material-icons plus">add</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 noResults" *ngIf="(arsenalData | searchFilter:search).length === 0">
+      No Matches found for <strong><em>{{search.title}}</em></strong>
+    </div>
+  </div>
+
+
+  <div class="search-results"
+       infiniteScroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollThrottle]="300"
+       (scrolled)="onScroll()">
+  </div>
+
+</div>

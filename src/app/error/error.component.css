@@ -1,0 +1,9 @@
+.boxError {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  height: 320px;
+  margin-top: -253px;
+}
