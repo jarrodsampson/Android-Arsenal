@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: rgba(236, 240, 241,1.0);
+}
+.spacer-top {
+  width:100%;
+  height:40px;
+}
+
+.fa-arrow-left {
+  margin: 0 .4em 0 -1em;
+}
+
+.input[type="text"]:focus {
+  border-bottom:1em solid orange;
+  box-shadow:none;
+}
+
+.card .card-content {
+  min-height: 225px;
+}
+
+.noResults {
+  padding: 0 0 0 .8em;
+  color: #fff;
+  margin-top: 0;
+  font-size: 20pt;
+}
+
+.card-title{
+  cursor:pointer;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+}
+
+.card .card-content .card-title:hover {
+  color: #43a047;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #43a047;
+  margin-right: 24px;
+  transition: color .3s ease;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.item {
+  text-align: center;
+}
+
+.plus,.delete {
+  position: absolute;
+  top: .6em;
+  right: 1em;
+}
+
+#sidenav-overlay {
+  z-index: 996;
+}
+
+/* headroom css */
+
+.slide {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out
+}
+.slide--reset {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0)
+}
+.slide--up {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%)
+}
+
+.topScroll {
+  cursor:pointer;
+}
+
+.side-nav {
+  min-height: 1000px;
+}
+
+.centerScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14pt;
+  width: 200px;
+  height: 40px;
+  margin-left: -100px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+@media(max-width:767px) {
+  .title-text {
+    display:none;
+  }
+}
+
+.side-nav img {
+  max-width: 100%;
+  margin-bottom: -1.9em;
+}
