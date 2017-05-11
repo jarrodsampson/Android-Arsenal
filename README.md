@@ -5,7 +5,7 @@ Bank Interest Calculator app built with Angular 2, Bootstrap 3, SASS, Typescript
 [![Build Status](https://travis-ci.org/stevenbenner/jquery-powertip.svg?branch=master)](https://travis-ci.org/stevenbenner/jquery-powertip)
 ![License](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
-![Image](https://github.com/planlodge/Bank-Interest-Calculator/blob/master/src/images/screen1.png?raw=true)
+![Image](https://github.com/planlodge/Android-Arsenal/blob/master/screen.png?raw=true)
 
 ## Description
 
