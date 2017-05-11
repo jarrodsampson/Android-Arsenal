@@ -1,28 +1,22 @@
-# Arsenal
+# Bank Interest Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Bank Interest Calculator app built with Angular 2, Bootstrap 3, SASS, Typescript, Gulp, and Browserify. Designed by [planlodge](http://planlodge.com).
 
-## Development server
+[![Build Status](https://travis-ci.org/stevenbenner/jquery-powertip.svg?branch=master)](https://travis-ci.org/stevenbenner/jquery-powertip)
+![License](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Image](https://github.com/planlodge/Bank-Interest-Calculator/blob/master/src/images/screen1.png?raw=true)
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+> Find out how much bank interest you will recieve based on your rates. Rates are shown based on the total amount, number of months, and interest percent.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- Responsive and mobile-friendly
+- Calculates the estimated interest that would be payed.
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Bank Interest Calculator App is licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
