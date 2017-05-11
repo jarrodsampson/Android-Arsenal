@@ -1,6 +1,6 @@
 # Android Arsenal
 
-Bank Interest Calculator app built with Angular 2, Bootstrap 3, SASS, Typescript, Gulp, and Browserify. Designed by [planlodge](http://planlodge.com).
+An awesome collection of Android Repositories to add to your applications. Built with Angular 4. Designed by [planlodge](http://planlodge.com).
 
 [![Build Status](https://travis-ci.org/stevenbenner/jquery-powertip.svg?branch=master)](https://travis-ci.org/stevenbenner/jquery-powertip)
 ![License](https://img.shields.io/packagist/l/doctrine/orm.svg)
