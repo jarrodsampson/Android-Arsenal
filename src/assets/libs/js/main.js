@@ -73,9 +73,15 @@ var customScripts = {
       });
     });
 
-    $('.parallax').parallax();
+    // activate menu dropdown
+    $(".dropdown-button").dropdown();
 
-    $('.modal-trigger').modal({
+    // menu side bar
+
+    $(".button-collapse").sideNav();
+
+
+    $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
       in_duration: 300, // Transition in duration
@@ -84,10 +90,8 @@ var customScripts = {
       complete: function() {  } // Callback for Modal close
     });
 
-    $('.scrollspy').scrollSpy();
-
-    $(window).scroll(function(){
-      $(".topSlider").css("opacity", 1 - $(window).scrollTop() / 450);
+    $('#aboutModalTrigger,#aboutModalTrigger2').click(function(){
+      $('#aboutModal').modal('open');
     });
 
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
 
 import { APIService } from '../services/APIService';
+import {RepoStore} from "../services/Store";
+import { MzToastService } from 'ng2-materialize';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +17,15 @@ export class DetailComponent implements OnInit {
   detailItem = "";
   relatedList = [];
   isRelated = false;
+  savedFavorites = [];
+  repoStore: RepoStore;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private _apiService: APIService) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private _apiService: APIService, repoStore: RepoStore, private toastService: MzToastService) {
+    this.repoStore = repoStore;
+    for (var i = 0; i < this.repoStore.repos.length;++i) {
+      this.savedFavorites.push(this.repoStore.repos[i].title);
+    }
+  }
 
   ngOnInit() {
 
@@ -60,6 +69,23 @@ export class DetailComponent implements OnInit {
             );
         }
       );
+  }
+
+  categoryView(category) {
+    //console.log(category.title);
+    this.router.navigate(['./category/' + encodeURI(category)]);
+  }
+
+  saveRepo(repo) {
+    // check if already saved
+    if (this.savedFavorites.indexOf(repo.title) > -1) {
+      this.toastService.show(repo.title + " is already saved!", 2500);
+    } else {
+      //console.log("Added: " + repo.title);
+      this.repoStore.add(repo.title, repo.id, repo.link, repo.description, repo.tagName);
+      this.toastService.show("Added: " + repo.title, 2500);
+      this.savedFavorites.push(repo.title);
+    }
   }
 
 }

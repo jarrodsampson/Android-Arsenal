@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Arsenal</title>
+  <title>Android Arsenal</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,33 +147,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <script src="assets/headroom.js"></script>
-  <script src="assets/main.js"></script>
-  <script>
-    $(document).ready(function(){
-
-      // activate menu dropdown
-      $(".dropdown-button").dropdown();
-
-      // menu side bar
-
-      $(".button-collapse").sideNav();
-
-
-      $('.modal').modal({
-        dismissible: true, // Modal can be dismissed by clicking outside of the modal
-        opacity: .5, // Opacity of modal background
-        in_duration: 300, // Transition in duration
-        out_duration: 200, // Transition out duration
-        ready: function() {  }, // Callback for Modal open
-        complete: function() {  } // Callback for Modal close
-      });
-
-      $('#aboutModalTrigger,#aboutModalTrigger2').click(function(){
-        $('#aboutModal').modal('open');
-      });
-
-    });
-  </script>
+  <script src="assets/libs/js/headroom.js"></script>
+  <script src="assets/libs/js/main.js"></script>
 </body>
 </html>

@@ -57,16 +57,16 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ 177:
+/***/ 184:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(246);
+var content = __webpack_require__(250);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(593)(content, {});
+var update = __webpack_require__(597)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -84,7 +84,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 246:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -92,14 +92,14 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n  background: rgba(236, 240, 241,1.0);\n}\n.spacer-top {\n  width:100%;\n  height:40px;\n}\n\n.fa-arrow-left {\n  margin: 0 .4em 0 -1em;\n}\n\n.input[type=\"text\"]:focus {\n  border-bottom:1em solid orange;\n  box-shadow:none;\n}\n\n.card .card-content {\n  min-height: 225px;\n}\n\n.noResults {\n  padding: 0 0 0 .8em;\n  color: #fff;\n  margin-top: 0;\n  font-size: 20pt;\n}\n\n.card-title{\n  cursor:pointer;\n  transition: all .4s ease-in-out;\n  -webkit-transition: all .4s ease-in-out;\n  -moz-transition: all .4s ease-in-out;\n}\n\n.card .card-content .card-title:hover {\n  color: #43a047;\n}\n\n.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {\n  color: #43a047;\n  margin-right: 24px;\n  transition: color .3s ease;\n  text-transform: uppercase;\n  text-align: center;\n  cursor: pointer;\n}\n\n\n.item {\n  text-align: center;\n}\n\n.plus,.delete {\n  position: absolute;\n  top: .6em;\n  right: 1em;\n}\n\n#sidenav-overlay {\n  z-index: 996;\n}\n\n/* headroom css */\n\n.slide {\n  transition: all .25s ease-in-out\n}\n.slide--reset {\n  -webkit-transform: translateY(0);\n  transform: translateY(0)\n}\n.slide--up {\n  -webkit-transform: translateY(-100%);\n  transform: translateY(-100%)\n}\n\n.topScroll {\n  cursor:pointer;\n}\n\n.side-nav {\n  min-height: 1000px;\n}\n\n.centerScreen {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  font-size: 14pt;\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -20px;\n  text-align: center;\n}\n\n@media(max-width:767px) {\n  .title-text {\n    display:none;\n  }\n}\n\n.side-nav img {\n  max-width: 100%;\n  margin-bottom: -1.9em;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n  background: rgba(236, 240, 241,1.0);\n}\n.spacer-top {\n  width:100%;\n  height:40px;\n}\n\n.fa-arrow-left {\n  margin: 0 .4em 0 -1em;\n}\n\n.input[type=\"text\"]:focus {\n  border-bottom:1em solid orange;\n  box-shadow:none;\n}\n\n.card .card-content {\n  min-height: 225px;\n}\n\n.noResults {\n  padding: 0 0 0 .8em;\n  color: #000;\n  margin-top: 0;\n  font-size: 20pt;\n}\n\n.card-title{\n  cursor:pointer;\n  transition: all .4s ease-in-out;\n  -webkit-transition: all .4s ease-in-out;\n  -moz-transition: all .4s ease-in-out;\n}\n\n.card .card-content .card-title:hover {\n  color: #43a047;\n}\n\n.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {\n  color: #43a047;\n  margin-right: 24px;\n  transition: color .3s ease;\n  text-transform: uppercase;\n  text-align: center;\n  cursor: pointer;\n}\n\n\n.item {\n  text-align: center;\n}\n\n.plus,.delete {\n  position: absolute;\n  top: .6em;\n  right: 1em;\n}\n\n#sidenav-overlay {\n  z-index: 996;\n}\n\n/* headroom css */\n\n.slide {\n  transition: all .25s ease-in-out\n}\n.slide--reset {\n  -webkit-transform: translateY(0);\n  transform: translateY(0)\n}\n.slide--up {\n  -webkit-transform: translateY(-100%);\n  transform: translateY(-100%)\n}\n\n.topScroll {\n  cursor:pointer;\n}\n\n.side-nav {\n  min-height: 1000px;\n}\n\n.centerScreen {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  font-size: 14pt;\n  width: 200px;\n  height: 40px;\n  margin-left: -100px;\n  margin-top: -20px;\n  text-align: center;\n}\n\n.chip {\n  background-color: rgba(0,0,0,0.4);\n  color: #fff;\n}\n\n.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {\n  background: rgba(0,0,0,0.8);\n}\n\n.owl-theme .owl-dots .owl-dot span {\n  background: rgba(0,0,0,0.4);\n}\n\n@media(max-width:767px) {\n  .title-text {\n    display:none;\n  }\n}\n\n@media(max-width: 600px) {\n  .card .card-content {\n    min-height: 0;\n    word-break: normal;\n  }\n}\n\n.side-nav img {\n  max-width: 100%;\n  margin-bottom: -1.9em;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 593:
+/***/ 597:
 /***/ (function(module, exports) {
 
 /*
@@ -352,13 +352,13 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 597:
+/***/ 604:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(177);
+module.exports = __webpack_require__(184);
 
 
 /***/ })
 
-},[597]);
+},[604]);
 //# sourceMappingURL=styles.bundle.js.map

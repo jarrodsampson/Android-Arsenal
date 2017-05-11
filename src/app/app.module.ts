@@ -14,8 +14,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { SearchComponent } from './search/search.component';
-import { CategoryComponent } from './category/category.component';
-import { CategoryListComponent } from './category/categoryList.component';
+import { CategoryComponent } from './category/categoryItems/category.component';
+import { CategoryListComponent } from './category/categoriesList/categoryList.component';
 import { LetterComponent } from './letter/letter.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ErrorComponent } from './error/error.component';
@@ -24,66 +24,24 @@ import { APIService } from './services/APIService';
 import {RepoStore} from './services/Store';
 
 import { RouterModule }   from '@angular/router';
-
+import {APP_ROUTES} from './routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimationService } from './app.animation.service';
 
 @NgModule({
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     OwlModule,
     InfiniteScrollModule,
     TruncateModule,
     MaterializeModule.forRoot(),
-    RouterModule.forRoot([
-      {
-        path: 'details/:id',
-        component: DetailComponent
-      },
-      {
-        path: 'search/:searchTerm',
-        component: SearchComponent
-      },
-      {
-        path: 'category/:category',
-        component: CategoryComponent
-      },
-      {
-        path: 'categories',
-        component: CategoryListComponent
-      },
-      {
-        path: 'find/:letter',
-        component: LetterComponent
-      },
-      {
-        path: 'home',
-        component: HomeComponent,
-        pathMatch: 'full'
-      },
-      {
-        path: 'saved',
-        component: FavoritesComponent,
-        pathMatch: 'full'
-      },
-      {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
-      },
-      {
-        path: 'error404',
-        component: ErrorComponent,
-        pathMatch: 'full'
-      },
-      {
-        path: '**',
-        redirectTo: '/error404'
-      }
-    ])
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [APIService, RepoStore],
+  providers: [APIService, RepoStore, AnimationService],
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,

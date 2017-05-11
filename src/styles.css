@@ -22,7 +22,7 @@ body {
 
 .noResults {
   padding: 0 0 0 .8em;
-  color: #fff;
+  color: #000;
   margin-top: 0;
   font-size: 20pt;
 }
@@ -101,9 +101,29 @@ body {
   text-align: center;
 }
 
+.chip {
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: rgba(0,0,0,0.8);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: rgba(0,0,0,0.4);
+}
+
 @media(max-width:767px) {
   .title-text {
     display:none;
+  }
+}
+
+@media(max-width: 600px) {
+  .card .card-content {
+    min-height: 0;
+    word-break: normal;
   }
 }
 

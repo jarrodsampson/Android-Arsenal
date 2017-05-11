@@ -1,36 +1,40 @@
 
 
 <div class="spacer-top"></div>
-<div class="row">
-  <div class="col s12">
-    <button (click)="goBack()" class="waves-effect waves-light btn amber darken-2"><i class="fa fa-arrow-left"></i> Go Back</button>
-  </div>
-</div>
 
 <div class="row">
   <div class="col s12">
-
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title truncate">{{details.title}}</span>
-        <p>{{details.description}}</p>
-        <p>Category - {{details.tagName}}</p>
-      </div>
-      <div class="card-action">
-        <a href="{{details.link}}" target="_blank">Visit Repo</a>
-        <a href="{{details.tag}}" target="_blank">View Tag</a>
-      </div>
+    <div class="col s12">
+      <button (click)="goBack()" class="waves-effect waves-light btn amber darken-2"><i class="fa fa-arrow-left"></i> Go Back</button>
     </div>
-
   </div>
-</div>
-
-
-<div class="row">
 
   <div class="col s12">
-    <h2>Related Items</h2>
+    <div class="col s12">
+
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title truncate">{{details.title}}</span>
+          <p>{{details.description}}</p>
+          <p>Category - <a class="categoryLink" (click)="categoryView(details.tagName)">{{details.tagName}}</a></p>
+        </div>
+        <div class="card-action">
+          <a href="{{details.link}}" target="_blank">Visit Repo</a>
+          <a href="{{details.tag}}" target="_blank">View Tag</a>
+          <a (click)="saveRepo(details)"><i class="material-icons plus">add</i></a>
+        </div>
+      </div>
+
+    </div>
   </div>
+
+  <div class="col s12">
+    <div class="col s12">
+      <h2>Related Items</h2>
+    </div>
+  </div>
+
+
 </div>
 
 <div class="row">
@@ -39,15 +43,16 @@
 
     <div class="relatedList">
 
-      <div class="col s12 m3" *ngFor="let related of relatedList" (click)="detailsView(related)">
+      <div class="col s12 m3" *ngFor="let related of relatedList">
         <div class="card">
-          <div class="card-content">
+          <div class="card-content" (click)="detailsView(related)">
             <span class="card-title truncate">{{related.title}}</span>
             <p class="" [innerHTML]="related.description | truncate : 100"></p>
           </div>
           <div class="card-action">
             <a (click)="detailsView(related)">Details</a>
             <a href="{{related.link}}" target="_blank">Repo</a>
+            <a (click)="saveRepo(related)"><i class="material-icons plus">add</i></a>
           </div>
         </div>
       </div>

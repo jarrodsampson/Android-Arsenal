@@ -1,14 +1,15 @@
 
-
 <div class="row">
   <div class="col s12">
-    <span><h1>Results for: {{searchTerm}}</h1></span><span *ngIf="searchList.length > 0">{{searchList.length}} Results Found.</span>
+    <div class="col s12">
+      <span><h1>Results for: {{searchTerm}}</h1></span><span *ngIf="searchList.length > 0">{{searchList.length}} Results Found.</span>
+    </div>
   </div>
-</div>
 
-<div class="row">
   <div class="col s12">
-    <button (click)="goBack()" class="waves-effect waves-light btn amber darken-2"><i class="fa fa-arrow-left"></i> Go Back</button>
+    <div class="col s12">
+      <button (click)="goBack()" class="waves-effect waves-light btn amber darken-2"><i class="fa fa-arrow-left"></i> Go Back</button>
+    </div>
   </div>
 </div>
 

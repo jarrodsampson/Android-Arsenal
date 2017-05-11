@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 import {RepoStore} from "../services/Store";
-
+import { MzToastService } from 'ng2-materialize';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class FavoritesComponent implements OnInit {
   savedFavorites = [];
   repoStore: RepoStore;
 
-  constructor(private router: Router, repoStore: RepoStore) {
+  constructor(private router: Router, repoStore: RepoStore, private toastService: MzToastService) {
     this.repoStore = repoStore;
   }
 
@@ -25,6 +25,7 @@ export class FavoritesComponent implements OnInit {
 
   remove(repo){
     this.repoStore.remove(repo);
+    this.toastService.show("Removed " + repo.title + " repo.", 2500);
   }
 
   goBack() {
@@ -39,6 +40,7 @@ export class FavoritesComponent implements OnInit {
   eraseAll() {
     console.log("All Removed");
     this.repoStore.removeAll();
+    this.toastService.show("Cleared All Saved Repositories.", 2500);
     this.savedFavorites = [];
   }
 

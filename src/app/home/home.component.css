@@ -44,12 +44,14 @@
 
 .repoBg {
   width:100%;
-  background:url('../../assets/images/background.jpg') top center fixed;
+  background:url('../../assets/images/background2.png') right 200px no-repeat fixed;
+  background-size:41%;
   min-height: 300px;
 }
-@media(max-width: 600px) {
-  .card .card-content {
-    min-height: 0;
-    word-break: normal;
-  }
+
+.optionsBg {
+  width:100%;
+  background:url('../../assets/images/bricks.jpg') left 50px scroll #fff;
+  background-size:100%;
+  padding:0 0 .5em 0;
 }

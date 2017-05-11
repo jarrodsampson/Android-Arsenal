@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { routeAnimation } from './app.animations';
 
 import 'rxjs/Rx';
 
