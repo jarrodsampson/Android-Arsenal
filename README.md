@@ -1,4 +1,4 @@
-# Bank Interest Calculator
+# Android Arsenal
 
 Bank Interest Calculator app built with Angular 2, Bootstrap 3, SASS, Typescript, Gulp, and Browserify. Designed by [planlodge](http://planlodge.com).
 
@@ -18,5 +18,5 @@ Bank Interest Calculator app built with Angular 2, Bootstrap 3, SASS, Typescript
 
 ## License
 
-Bank Interest Calculator App is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Android Arsenal App is licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
